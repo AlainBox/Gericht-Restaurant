@@ -1,0 +1,133 @@
+.app__navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+
+    background: var(--color-black);
+    padding: 1rem 2rem;
+
+    @media screen and (max-width: 650px){
+        padding: 1rem;
+        overflow-x: hidden;
+    }
+}
+
+.app__navbar-logo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    img{
+        width: 150px;
+
+        @media screen and (min-width: 2000px) {
+            width: 210px;
+        }
+
+        @media screen and (max-width: 650px){
+            width: 110px;
+        }
+    }
+}
+
+.app__navbar-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+
+    list-style: none;
+
+    li{
+        margin: 0 1rem;
+        cursor: pointer;
+
+        a:hover{
+            color: var(--color-golden);
+        }
+    }
+
+    @media screen and (max-width: 1150px){
+        display: none;
+    }
+}
+
+.app__navbar-login{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    a{
+        margin: 0 1rem;
+        text-decoration: none;
+        transition: .5s ease-in-out;
+
+        &:hover{
+            border-bottom: 1px solid var(--color-golden);
+        }
+    }
+
+    div{
+        width: 1px;
+        height: 30px;
+        background: var(--color-golden);
+    }
+
+    @media screen and (max-width: 650px){
+        display: none;
+    }
+}
+
+.app__navbar-smallscreen{
+    display: none;
+    cursor: pointer;
+
+    @media screen and (max-width: 1150px) {
+        display: flex;
+    }
+}
+
+.app__navbar-smallscreen_overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    background: var(--color-black);
+
+    transition: .5s ease-in-out;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.app__navbar-smallscreen_overlay .overlay__close{
+    font-size: 27px;
+    color: var(--color-golden);
+    cursor: pointer;
+
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.app__navbar-smallscreen-links{
+    list-style: none;
+
+    li{
+        margin: 2rem;
+        cursor: pointer;
+        color: var(--color-golden);
+        font-size: 2rem;
+        text-align: center;
+        font-family: var(--font-base);
+        transition: all .3s ease-in-out;
+
+        a:hover{
+            color: var(--color-white);
+            transition: all .3s ease-in-out;
+        }
+    }
+}
+

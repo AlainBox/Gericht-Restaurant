@@ -1,0 +1,82 @@
+.app__aboutus{
+    position: relative;
+}
+
+.app__aboutus-overlay{
+    position: absolute;
+    inset: 0;
+
+    img{
+        width: 25rem;
+        height: 27rem;
+        z-index: 0;
+
+        @media screen and (max-width: 650px){
+            width: 20rem;
+            height: 22rem;
+        }
+    }
+}
+
+.app__aboutus-content{
+    z-index: 5;
+    width: 100%;
+
+    @media screen and (max-width: 900px){
+        flex-direction: column;
+    }
+}
+
+.app__aboutus-content_about{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+
+    text-align: right;
+
+    p{
+        margin: 2rem 0;
+        color: var(--color-grey);
+
+        @media screen and (max-width: 900px){
+            margin: 4rem 0;
+        }
+    }
+}
+
+.app__aboutus-content_knife{
+    margin: 2rem 4rem;
+
+    img{
+        height: 900px;
+    
+        @media screen and (max-width: 900px){
+            height: 35rem;
+        }
+    }
+
+    @media screen and (max-width: 900px){
+        margin: 4rem 0;
+    }
+}
+
+.app__aboutus-content_history{
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+
+    text-align: left;
+
+    p{
+        margin: 2rem 0;
+        color: var(--color-grey);
+        
+        @media screen and (max-width: 900px){
+            margin: 4rem 0;
+        }
+    }
+}
